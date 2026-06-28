@@ -1,0 +1,437 @@
+
+
+
+
+
+AI-Based
+Telecom Revenue
+Leakage &
+Anomaly Detection
+System
+
+Presented By
+Manvi Ahuja
+MCA Final Year
+Domain
+Artificial Intelligence & Data Analytics
+Guide
+Dr. Meenakshi S
+University
+VIT University
+© 2025  |  MCA Final Year Project
+
+
+
+Introduction
+2 / 15
+
+
+About the Study
+The telecom industry generates massive volumes of usage & billing data daily.
+Revenue leakage is caused by:
+Billing inaccuracies
+Fraudulent activities
+Abnormal usage behavior
+Roaming discrepancies & customer churn
+Traditional rule-based systems are inefficient in detecting hidden anomalies.
+AI & ML can improve revenue assurance by identifying suspicious patterns automatically.
+
+Importance of Study
+
+Helps telecom operators reduce financial losses
+
+Improves operational efficiency
+
+Enables proactive fraud & anomaly detection
+Revenue Leakage Costs Telecom ~$25B Globally Per Year
+
+
+
+Problem Statement
+3 / 15
+
+
+Telecom operators experience significant revenue loss due to undetected abnormal activities and billing inconsistencies. Existing systems rely on static rules & manual monitoring — unable to detect evolving fraud patterns efficiently.
+
+Challenges Identified
+Large-scale telecom data handling
+Lack of intelligent anomaly detection
+Limited real-world fraud datasets
+High false-positive rates in traditional systems
+Difficulty identifying hidden revenue leakage patterns
+
+Need for Proposed System
+
+AI-driven anomaly detection
+
+Automated identification of suspicious telecom usage
+
+Improved decision-making through analytics
+
+
+
+Objectives of the Project
+4 / 15
+
+
+Primary Objectives
+Analyze telecom customer usage behavior using data analytics.
+Identify abnormal telecom activity patterns using Machine Learning.
+Enhance the telecom dataset using synthetic anomaly injection.
+Build an intelligent revenue leakage detection framework.
+Improve telecom revenue assurance processes.
+
+Secondary Objectives
+
+Perform customer churn analysis
+
+Study relationships between usage and anomaly occurrence
+
+Evaluate anomaly detection performance using ML algorithms
+
+
+
+Scope of the Project
+5 / 15
+
+
+✓  IN SCOPE
+
+Telecom customer behavior analysis
+
+Revenue leakage analytics
+
+Customer churn analysis
+
+Synthetic anomaly generation
+
+AI/ML-based anomaly detection
+
+Data visualization & statistical analysis
+
+
+✗  OUT OF SCOPE
+
+Real-time telecom infrastructure integration
+
+Live billing system deployment
+
+Network hardware monitoring
+
+Production-level implementation
+
+
+
+Literature Review
+6 / 15
+
+
+Area 1
+Telecom Revenue Assurance
+Companies use revenue assurance systems to detect financial losses. Existing systems mostly depend on rule-based detection methods.
+
+
+Area 2
+ML in Fraud Detection
+ML algorithms identify hidden patterns and unusual behavior automatically. AI-based systems are more adaptive than static systems.
+
+
+Area 3
+Anomaly Detection Techniques
+Isolation Forest  •  Random Forest  •  LOF  •  XGBoost  •  Neural Networks
+
+
+Research Gap Identified
+Limited use of AI-driven adaptive systems in telecom revenue assurance.
+Lack of sufficient anomaly-rich telecom datasets.
+Existing systems struggle with imbalanced data.
+
+
+Proposed Improvement
+Use synthetic anomaly injection to create better training data.
+Apply ML algorithms for intelligent anomaly detection.
+
+
+
+Dataset Description
+7 / 15
+
+Dataset Used: Telecom Customer Churn Dataset (BigML)
+
+Dataset Files
+churn-bigml-20.csv
+churn-bigml-80.csv
+
+Total Records
+~3,333
+Customers
+
+Combined Size
+Two CSV
+Files Merged
+
+Source
+BigML
+Repository
+
+Key Features Included in Dataset:
+State   |   Account Length   |   International Plan   |   Voice Mail Plan   |   Day/Eve/Night/Intl Minutes & Calls   |   Day/Eve/Night/Intl Charges   |   Customer Service Calls   |   Churn (Target)
+
+
+
+Dataset Enhancement: Synthetic Anomaly Injection
+8 / 15
+
+
+Why Synthetic Anomalies?
+
+Real telecom fraud data is limited
+
+Imbalanced datasets reduce ML performance
+
+Synthetic anomalies simulate real-world abnormal behavior
+
+
+Injection Process
+
+Injected ~5% anomalous records
+
+Modified: call durations, charges, international usage, activity patterns
+
+Added column: synthetic_anomaly (1=anomaly, 0=normal)
+
+
+Benefits
+
+Improved dataset quality
+
+Better anomaly learning
+
+More realistic fraud simulation
+
+Enhanced ML model robustness
+
+
+
+Exploratory Data Analysis (EDA)
+9 / 15
+
+
+Customer Churn Distribution
+Majority customers are non-churn.
+Smaller percentage represents churned users.
+
+
+Usage Pattern Analysis
+High international usage may indicate abnormal activity. Frequent customer service calls correlate with churn risk.
+
+
+Anomaly Behavior
+Injected anomalies show significant deviation in call minutes, charges, and usage patterns.
+
+
+Statistical Insights
+Some features show strong correlation with churn. Outlier behavior is visible in telecom usage metrics.
+
+
+
+Proposed Methodology
+10 / 15
+
+
+01
+Data Collection
+Telecom churn datasets from BigML repository
+
+
+02
+Preprocessing
+Missing value check, cleaning, encoding, normalization
+
+
+03
+Anomaly Injection
+Statistical anomaly generation on numeric features
+
+
+04
+EDA
+Correlation, distribution & outlier visualization
+
+
+05
+ML Model Dev
+Isolation Forest, Random Forest, XGBoost
+
+
+06
+Evaluation
+Accuracy, Precision, Recall, F1-score
+
+
+
+Proposed System Architecture
+11 / 15
+
+Telecom Dataset
+
+
+Data Preprocessing
+
+
+Synthetic Anomaly Injection
+
+
+Exploratory Data Analysis
+
+Feature Engineering
+
+
+Machine Learning Models
+
+
+Anomaly Detection Output
+
+
+Revenue Leakage Identification
+
+►
+
+
+
+Tools & Technologies Used
+12 / 15
+
+Programming Language
+
+
+Python 3.x
+
+Libraries Used
+
+
+Pandas
+
+NumPy
+
+Scikit-learn
+
+Matplotlib
+
+Seaborn
+
+Development Environment
+
+
+Jupyter Notebook
+
+Google Colab
+
+Concepts Applied
+
+
+Machine Learning
+
+Data Analytics
+
+Anomaly Detection
+
+Statistical Analysis
+
+
+
+Research Design & Project Plan
+13 / 15
+
+
+Project Phase
+Status
+
+
+Topic Selection
+Completed
+
+
+Literature Review
+Completed
+
+
+Dataset Collection
+Completed
+
+
+Data Cleaning
+Completed
+
+
+Synthetic Anomaly Injection
+Completed
+
+
+Exploratory Data Analysis
+Completed
+
+
+ML Model Development
+In Progress
+
+
+Performance Evaluation
+Pending
+
+
+Final Report Preparation
+Pending
+
+
+
+Expected Outcomes
+14 / 15
+
+
+Expected Results
+
+Detection of abnormal telecom behavior patterns
+
+Improved telecom revenue leakage identification
+
+Better fraud and anomaly monitoring
+
+Enhanced customer behavior analytics
+
+Improved ML model performance using synthetic anomalies
+
+Business Benefits
+
+Reduced revenue loss
+
+Faster anomaly detection
+
+Improved operational monitoring
+
+Better telecom decision-making
+
+
+Future Enhancements
+
+
+
+⚡ Real-time Anomaly Detection
+Live monitoring system for telecom data streams
+
+
+🧠 Deep Learning-Based Analytics
+Neural network models for advanced fraud detection
+
+
+💳 Billing System Integration
+Direct integration with telecom billing platforms
+
+
+📊 Interactive Dashboards
+Power BI / Tableau visualization layer
+
+
+☁️ Cloud Deployment
+Scalable deployment on AWS / Azure / GCP
+Thank You

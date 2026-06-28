@@ -1,0 +1,604 @@
+EXTRACTING DOCX...
+Title of the Dissertation
+OLMCA699 - Dissertation
+Submitted in partial fulfillment of the requirements for the degree of
+Master of Computer Applications
+in
+Department of Computer Applications
+by
+Student NAME
+REGISTER NUMBER
+Under the guidance of
+Prof. / Dr.
+School of Computer Science and Engineering
+VIT, Vellore
+June, 2026
+Title of the Dissertation
+OLMCA699 - Dissertation
+Submitted in partial fulfillment of the requirements for the degree of
+Master of Computer Applications
+in
+Department of Computer Applications
+by
+Student NAME
+REGISTER NUMBER
+Under the guidance of
+Prof. / Dr.
+School of Computer Science and Engineering
+VIT, Vellore
+DECLARATION
+I    hereby declare    that    the  <Dissertation> entitled “Dissertation  title" submitted by me, for the award of the degree of Master of Computer Applications in Department of Computer Applications, School of Computer Science and Engineering  to VIT is a record of bonafide work carried out by me under the supervision of <VIT – Faculty Guide Name, Designation, SCORE/SCOPE, VIT, Vellore>.
+I further declare that the work reported in this dissertation has not been submitted and will not be submitted, either in part or in full, for the award of any other degree or diploma in this institute or any other institute or university.
+Place: Vellore
+Date:
+Signature of the Candidate
+CERTIFICATE
+This is to certify that the <Dissertation > entitled “Dissertation title” submitted by Student Name & Reg. No, SCOPE, VIT, for the award of the degree of Master of Computer Applications in Department of Computer Applications, is a record of bonafide work carried out by him / her under my supervision during the period, 27/03/26 to 03/07/26, as per the VIT code of academic and research ethics.
+The contents of this report have not been submitted and will not be submitted either in part or in full, for the award of any other degree or diploma in this institute or any other institute or university. The dissertation fulfill the requirements and regulations of the University and in my opinion meet the necessary standards for submission.
+Place: Vellore
+Date:
+Signature of the VIT-SCORE/SCOPE - Guide
+Head of the Department
+Department of Computer Applications
+ACKNOWLEDGEMENT
+It is my pleasure to express with a deep sense of gratitude to my Dissertation guide <Dr. or Prof. Guide Name, Designation>, School of Computer Science and Engineering Vellore Institute of Technology, Vellore for his/her constant guidance, continual encouragement, in my endeavor. My association with him/her is not confined to academics only, but it is a great opportunity on my part to work with an intellectual and an expert in the field of < Domain or dissertation / internship area >.
+"I would like to express my heartfelt gratitude to Honorable Chancellor Dr. G Viswanathan; respected Vice Presidents Mr. Sankar Viswanathan, Dr. Sekar Viswanathan, Vice Chancellor Dr. V. S. Kanchana Bhaaskaran; Pro-Vice Chancellor Dr. Partha Sharathi Mallick; and Registrar Dr. Jayabarathi T.
+My whole-hearted thanks to Director, VITOL, School of Computer Science and Engineering Head, Department of Computer Applications, all faculty, staff and members working as limbs of our university for their continuous guidance throughout my course of study in unlimited ways.
+It is indeed a pleasure to thank my parents and friends who persuaded and encouraged me to take up and complete my dissertation successfully. Last, but not least, I express my gratitude and appreciation to all those who have helped me directly or indirectly towards the successful completion of the dissertation.
+Place: Vellore
+Date: 									<Student Name>
+Executive Summary
+Summary of the dissertation / internship for one page and not exceeding 200 words
+CONTENTS	                                                Page No.
+Acknowledgement	i
+DESIGN APPROACH AND DETAILS (as applicable)	.
+Design Approach / Materials & Methods	.
+Codes and Standards	.
+Constraints, Alternatives and Tradeoffs	.
+SCHEDULE, TASKS AND MILESTONES	.
+DISSERTATION / INTERNSHIP DEMONSTRATION
+Sample Codes
+Sample Screen Shots	.
+COST ANALYSIS / RESULT & DISCUSSION (as applicable)	.
+Note: from Chapter 4 to Chapter 7 according to your Dissertation, you are allowed to modify or to add the required chapters. Please discuss with your guide and add/modify the chapters accordingly.
+List of Figures
+(In the chapters, figure caption should come below the figure and table caption should come above the table. Figure and table captions should be of font size 10.)
+List of Tables
+Table No.	Title	Page No.
+2.1	Table caption	28
+List of Abbreviations
+3GPP	Third Generation Partnership Project
+2G	Second Generation
+3G	Third Generation
+4G	Fourth Generation
+AWGN	Additive White Gaussian Noise
+Symbols and Notations
+f	CFO
+	NCFO
+CHAPTER 1
+INTRODUCTION
+Artificial Intelligence (AI) refers to the development of computer systems that can perform tasks typically requiring human intelligence. These tasks range from recognizing speech, understanding natural language, making decisions, solving problems, to even learning from experience. AI encompasses a broad field of study, including machine learning, neural networks, robotics, natural language processing, and computer vision. By mimicking cognitive functions, AI aims to create systems capable of adapting to new information, making predictions, and optimizing processes.
+As technology continues to evolve, AI has moved from theoretical concepts to practical applications that are transforming industries. From virtual assistants like Siri and Alexa to self-driving cars, healthcare diagnostics, and personalized recommendations, AI is reshaping how we live, work, and interact with the world around us. Understanding AI is crucial as it increasingly influences our daily lives, presents ethical challenges, and offers unprecedented opportunities for innovation and efficiency.
+Objective
+The primary objective of this AI project is to develop a [specific AI system/tool/application] that utilizes machine learning and data analysis techniques to [solve a particular problem or enhance a process]. The project aims to…
+1.2 Motivation
+An AI-based Traffic Management System aims to optimize the flow of vehicles in urban areas by leveraging machine learning algorithms and real-time data. Utilizing inputs from traffic cameras, sensors, and GPS data, the AI can predict traffic congestion, adjust traffic light timings dynamically, and suggest optimal routes for drivers. This reduces travel time, minimizes fuel consumption, and decreases carbon emissions.
+By analyzing historical traffic patterns and integrating with public transportation systems, the AI can provide more accurate traffic forecasts and support city planners in making data-driven infrastructure decisions,
+Page Specification:
+Left Margin: 1.5 inch
+Right Margin: 1 inch
+Top Margin: 1 inch
+Bottom Margin: 1 inch
+Font & Size:
+Entire Dissertation - Font Name: Times New Roman
+Font size: 12
+Chapter Heading Font size: 14 and CAPS, BOLD
+Sub Heading Font size: 12 and No CAPS
+Paragraph:
+Paragraph Alignment: Justify
+Paragraph line Space: 1.5 line space
+Paragraph: In every chapter’s first paragraph, first line without 1 tab space and continue, in next paragraph with 1 tab space till the end of the chapter.
+*For reference check Chapter 1 formatting in this document
+Bullet points: do not use bullet numbering, instead use bullet image, select
+* for types, classifications , you can use bullet numbering (where it is required to mention in numbers)
+Page Numbers:
+Use roman letters page numbering from cover page to symbols and Notations chapter.
+For Cover page do not make the page number visible.
+From page number ii , should be visible before the chapter 1
+Use numeric page numbers (1, 2,3,..) from chapter 1. Introduction till References sections
+For Appendices, No page numbers required
+Total Number of pages required: 70 and above (from chapter 1 to reference section)
+In Appendices: you can add any other sample codes, images, manuals, Readme.txt etc.,)
+Figures:
+Centre the figure, Make it clear and visible, for better view go for portrait format. If the figure is huge in size then go for landscape format for image.
+In the chapters, figure caption should come below the  figure.
+Figure Caption should be in the Title Case, Times New Roman, 10 pt, and it should be of the Format: Fig. Chapter Number.Figure Number  Figure Caption.
+Look at the figure title mentioned below.
+Fig. 2.4 Sample Bar Graph
+Tables:
+For Tables: Title of the table should come in the top of the table as follows
+All the table caption should be in the Title case , Times New Roman, 10Point and it should be of the format: Table.Chapter Number.Table number Table Caption
+Table 6.1 MI and Deep Learning
+Equations:
+Every equation should be used by relevant tools or symbols in the word editor.
+Every equation should be cited as Eqn. 5.2 (Equation. fifth chapter.2 equation)
+A2+B2=C                                                     (5.2)
+When you cite the above equation should cite as follows;
+In the Eqn. 5.2 the variable A denotes the parameter of..
+CHAPTER 8
+SUMMARY
+A brief summary of the dissertation / internship findings, expected results. Recommendations
+CHAPTER 9
+REFERENCES
+Domenico Bloisi, Luca Iocchi, Michele Fiorini, Giovanni Graziano, “Automatic Maritime Surveillance with Visual Target Detection”, International Defense and Homeland Security Simulation Workshop (DHSS), September 2011.
+Domenico Bloisi, Luca Iocchi, Michele Fiorini, Giovanni Graziano, “Camera Based Target Recognition for Maritime Awareness”, Information Fusion (FUSION), 15th International Conference, July 2012.
+Rodrigo Da Silva Moreira, Nelson Francisco Favilla Ebecken, Alexandre Soares Alves, Frédéric Livernet4, Aline Campillo-Navetti, “A Survey on Video Detection and Tracking of Maritime Vessels”, IJRRAS 20, July 2014.
+Sergiy Fefilatyev, “Algorithms for Visual Maritime Surveillance with Rapidly Moving Camera”, Doctoral dissertation, University of South Florida, 2012.
+Websites
+[5] Digi-key Corporation. http://www.digikey.com/
+Data Sets
+[6] Alldatasheet. http://www.alldatasheet.com/
+Use APA Format for citation and reference section
+Basic format to reference journal articles
+Single Author format for APA Citation
+APPENDIX A
+Page numbers are not required from Appendix section
+You can keep additional sample codes and sample screen shots of your Dissertation / Internship in appendix A; and inside the dissertation, wherever required, the codes, algorithms, images should be kept. In Appendix whatever you keep are additional only
+Don’t keep the entire codes in the documents; use sample codes only, whichever is important.
+Screen shots of the Dissertation / Internship ; use sample images only, whichever is important
+Cover Page - Format
+
+
+EXTRACTING PPTX 2...
+--- Slide 1 ---
+
+
+
+
+
+AI-Based
+Telecom Revenue
+Leakage &
+Anomaly Detection
+System
+
+Presented By
+Manvi Ahuja
+MCA Final Year
+Domain
+Artificial Intelligence & Data Analytics
+Guide
+Dr. Meenakshi S
+University
+VIT University
+© 2026  |  MCA Final Year Project  |  Review 2 Presentation
+--- Slide 2 ---
+
+
+
+Introduction
+2 / 15
+
+
+About the Study
+The telecom industry generates massive volumes of usage & billing data daily.
+Revenue leakage is caused by:
+Billing inaccuracies
+Fraudulent activities
+Abnormal usage behavior
+Roaming discrepancies & customer churn
+Traditional rule-based systems are inefficient in detecting hidden anomalies.
+AI & ML can improve revenue assurance by identifying suspicious patterns automatically.
+
+Importance of Study
+
+Helps telecom operators reduce financial losses
+
+Improves operational efficiency
+
+Enables proactive fraud & anomaly detection
+Revenue Leakage Costs Telecom ~$25B Globally Per Year
+--- Slide 3 ---
+
+
+
+Problem Statement
+3 / 15
+
+
+Telecom operators experience significant revenue loss due to undetected abnormal activities and billing inconsistencies. Existing systems rely on static rules & manual monitoring — unable to detect evolving fraud patterns efficiently.
+
+Challenges Identified
+Large-scale telecom data handling
+Lack of intelligent anomaly detection
+Limited real-world fraud datasets
+High false-positive rates in traditional systems
+Difficulty identifying hidden revenue leakage patterns
+
+Need for Proposed System
+
+AI-driven anomaly detection
+
+Automated identification of suspicious telecom usage
+
+Improved decision-making through analytics
+--- Slide 4 ---
+
+
+
+Objectives of the Project
+4 / 15
+
+
+Primary Objectives
+Analyze telecom customer usage behavior using data analytics.
+Identify abnormal telecom activity patterns using Machine Learning.
+Enhance the telecom dataset using synthetic anomaly injection.
+Build an intelligent revenue leakage detection framework.
+Improve telecom revenue assurance processes.
+
+Secondary Objectives
+
+Perform customer churn analysis
+
+Study relationships between usage and anomaly occurrence
+
+Evaluate anomaly detection performance using ML algorithms
+--- Slide 5 ---
+
+
+
+Scope of the Project
+5 / 15
+
+
+✓  IN SCOPE
+
+Telecom customer behavior analysis
+
+Revenue leakage analytics
+
+Customer churn analysis
+
+Synthetic anomaly generation
+
+AI/ML-based anomaly detection
+
+Data visualization & statistical analysis
+
+
+✗  OUT OF SCOPE
+
+Real-time telecom infrastructure integration
+
+Live billing system deployment
+
+Network hardware monitoring
+
+Production-level implementation
+--- Slide 6 ---
+
+
+
+Literature Review
+6 / 15
+
+
+Area 1
+Telecom Revenue Assurance
+Companies use revenue assurance systems to detect financial losses. Existing systems mostly depend on rule-based detection methods.
+
+
+Area 2
+ML in Fraud Detection
+ML algorithms identify hidden patterns and unusual behavior automatically. AI-based systems are more adaptive than static systems.
+
+
+Area 3
+Anomaly Detection Techniques
+Isolation Forest  •  Random Forest  •  LOF  •  XGBoost  •  Neural Networks
+
+
+Research Gap Identified
+Limited use of AI-driven adaptive systems in telecom revenue assurance.
+Lack of sufficient anomaly-rich telecom datasets.
+Existing systems struggle with imbalanced data.
+
+
+Proposed Improvement
+Use synthetic anomaly injection to create better training data.
+Apply ML algorithms for intelligent anomaly detection.
+--- Slide 7 ---
+
+
+
+Dataset Description
+7 / 15
+
+Dataset Used: Telecom Customer Churn Dataset (BigML)
+
+Dataset Files
+churn-bigml-20.csv
+churn-bigml-80.csv
+
+Total Records
+~3,333
+Customers
+
+Combined Size
+Two CSV
+Files Merged
+
+Source
+BigML
+Repository
+
+Key Features Included in Dataset:
+State   |   Account Length   |   International Plan   |   Voice Mail Plan   |   Day/Eve/Night/Intl Minutes & Calls   |   Day/Eve/Night/Intl Charges   |   Customer Service Calls   |   Churn (Target)
+--- Slide 8 ---
+
+
+
+Dataset Enhancement: Synthetic Anomaly Injection
+8 / 15
+
+
+Why Synthetic Anomalies?
+
+Real telecom fraud data is limited
+
+Imbalanced datasets reduce ML performance
+
+Synthetic anomalies simulate real-world abnormal behavior
+
+
+Injection Process
+
+Injected ~5% anomalous records
+
+Modified: call durations, charges, international usage, activity patterns
+
+Added column: synthetic_anomaly (1=anomaly, 0=normal)
+
+
+Benefits
+
+Improved dataset quality
+
+Better anomaly learning
+
+More realistic fraud simulation
+
+Enhanced ML model robustness
+--- Slide 9 ---
+
+
+
+Exploratory Data Analysis (EDA)
+9 / 15
+
+
+Customer Churn Distribution
+Majority customers are non-churn.
+Smaller percentage represents churned users.
+
+
+Usage Pattern Analysis
+High international usage may indicate abnormal activity. Frequent customer service calls correlate with churn risk.
+
+
+Anomaly Behavior
+Injected anomalies show significant deviation in call minutes, charges, and usage patterns.
+
+
+Statistical Insights
+Some features show strong correlation with churn. Outlier behavior is visible in telecom usage metrics.
+--- Slide 10 ---
+
+
+
+Implemented Methodology
+10 / 15
+
+
+01
+Data Collection
+Telecom churn datasets from BigML repository
+
+
+02
+Preprocessing
+Missing value check, cleaning, encoding, normalization
+
+
+03
+Anomaly Injection
+Statistical anomaly generation on numeric features
+
+
+04
+EDA
+Correlation, distribution & outlier visualization
+
+
+05
+ML Model Dev
+Isolation Forest, Random Forest, XGBoost
+
+
+06
+Evaluation
+Accuracy, Precision, Recall, F1-score
+--- Slide 11 ---
+
+
+
+Implemented Agentic System Architecture
+11 / 15
+
+BigML Telecom Dataset
+
+
+Data Preprocessing
+
+
+Synthetic Anomaly Injection
+
+
+Feature Engineering & DB Ingestion
+
+ML Model Training & Pipelines
+
+
+SQLite & FAISS Vector DB
+
+
+LangGraph & RAG (Groq/Qwen)
+
+
+React + Vite Interactive UI
+
+►
+--- Slide 12 ---
+
+
+
+Tools & Technologies Used
+12 / 15
+
+Programming Language
+
+
+Python 3.x
+
+Libraries Used
+
+
+Pandas, NumPy
+
+Scikit-Learn, XGBoost
+
+FastAPI, SQLite3
+
+LangGraph, LangChain
+
+Groq/Qwen API
+
+Development Environment
+
+
+React + Vite (JS)
+
+Recharts / TailwindCSS
+
+Concepts Applied
+
+
+Machine Learning
+
+Agentic Workflows
+
+RAG (Retrieval-Augmented)
+
+Calculated Revenue Assurance
+--- Slide 13 ---
+
+
+
+Research Design & Project Plan
+13 / 15
+
+
+Project Phase
+Status
+
+
+Topic Selection
+Completed
+
+
+Literature Review
+Completed
+
+
+Dataset Collection
+Completed
+
+
+Data Cleaning
+Completed
+
+
+Synthetic Anomaly Injection
+Completed
+
+
+Exploratory Data Analysis
+Completed
+
+
+ML Model Development
+Completed
+
+
+Performance Evaluation
+Completed
+
+
+Final Report Preparation
+In Progress
+--- Slide 14 ---
+
+
+
+Implemented Outcomes & Findings
+14 / 15
+
+
+Key Insights Obtained
+
+Precise classification of billing fraud (98% accuracy on Random Forest)
+
+Unsupervised Isolation Forest detected 5% novel outliers
+
+Identified total revenue leakage of $4,230 across 3,333 records
+
+Chatbot answers database queries with 95% accuracy
+
+RAG retrieves correct policy SOP steps in under 2 seconds
+
+System Capabilities
+
+Visual analytics for churn and anomaly correlation
+
+Interactive agent chat interface for operations team
+
+Automated investigation ticket generator in markdown
+
+Modular Python backend decoupled from React UI
+--- Slide 15 ---
+
+
+Future Enhancements
+
+
+
+⚡ Real-time Anomaly Detection
+Deploy Kafka/Flink streams for live data analysis
+
+
+🧠 Deep Learning-Based Analytics
+Implement LSTM/GRU autoencoders for sequence fraud
+
+
+💳 Billing System Integration
+Production integration with billing ledger APIs
+
+
+📊 Model Drift & ML Ops
+Automated continuous training and monitoring pipelines
+
+
+☁️ Cloud Deployment
+Deploy containerized microservices on AWS / GCP using Docker & K8s
+Thank You (Questions?)

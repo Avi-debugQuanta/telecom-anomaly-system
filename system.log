@@ -1,0 +1,224 @@
+🚀 Starting Telecom Anomaly Detection System...
+🔧 Setting up Python virtual environment and installing dependencies...
+Requirement already satisfied: pip in ./.venv/lib/python3.14/site-packages (26.1.2)
+Requirement already satisfied: fastapi in ./.venv/lib/python3.14/site-packages (from -r /dev/fd/63 (line 1)) (0.138.1)
+Requirement already satisfied: pandas in ./.venv/lib/python3.14/site-packages (from -r /dev/fd/63 (line 3)) (3.0.3)
+Requirement already satisfied: scikit-learn in ./.venv/lib/python3.14/site-packages (from -r /dev/fd/63 (line 4)) (1.9.0)
+Requirement already satisfied: xgboost in ./.venv/lib/python3.14/site-packages (from -r /dev/fd/63 (line 5)) (3.3.0)
+Requirement already satisfied: joblib in ./.venv/lib/python3.14/site-packages (from -r /dev/fd/63 (line 6)) (1.5.3)
+Requirement already satisfied: sentence-transformers in ./.venv/lib/python3.14/site-packages (from -r /dev/fd/63 (line 7)) (5.6.0)
+Requirement already satisfied: faiss-cpu in ./.venv/lib/python3.14/site-packages (from -r /dev/fd/63 (line 8)) (1.14.3)
+Requirement already satisfied: langchain in ./.venv/lib/python3.14/site-packages (from -r /dev/fd/63 (line 9)) (1.3.11)
+Requirement already satisfied: langchain-community in ./.venv/lib/python3.14/site-packages (from -r /dev/fd/63 (line 10)) (0.4.2)
+Requirement already satisfied: langgraph in ./.venv/lib/python3.14/site-packages (from -r /dev/fd/63 (line 11)) (1.2.6)
+Requirement already satisfied: ollama in ./.venv/lib/python3.14/site-packages (from -r /dev/fd/63 (line 12)) (0.6.2)
+Requirement already satisfied: uvicorn[standard] in ./.venv/lib/python3.14/site-packages (from -r /dev/fd/63 (line 2)) (0.49.0)
+Requirement already satisfied: starlette>=0.46.0 in ./.venv/lib/python3.14/site-packages (from fastapi->-r /dev/fd/63 (line 1)) (1.3.1)
+Requirement already satisfied: pydantic>=2.9.0 in ./.venv/lib/python3.14/site-packages (from fastapi->-r /dev/fd/63 (line 1)) (2.13.4)
+Requirement already satisfied: typing-extensions>=4.8.0 in ./.venv/lib/python3.14/site-packages (from fastapi->-r /dev/fd/63 (line 1)) (4.15.0)
+Requirement already satisfied: typing-inspection>=0.4.2 in ./.venv/lib/python3.14/site-packages (from fastapi->-r /dev/fd/63 (line 1)) (0.4.2)
+Requirement already satisfied: annotated-doc>=0.0.2 in ./.venv/lib/python3.14/site-packages (from fastapi->-r /dev/fd/63 (line 1)) (0.0.4)
+Requirement already satisfied: click>=7.0 in ./.venv/lib/python3.14/site-packages (from uvicorn[standard]->-r /dev/fd/63 (line 2)) (8.4.2)
+Requirement already satisfied: h11>=0.8 in ./.venv/lib/python3.14/site-packages (from uvicorn[standard]->-r /dev/fd/63 (line 2)) (0.16.0)
+Requirement already satisfied: httptools>=0.8.0 in ./.venv/lib/python3.14/site-packages (from uvicorn[standard]->-r /dev/fd/63 (line 2)) (0.8.0)
+Requirement already satisfied: python-dotenv>=0.13 in ./.venv/lib/python3.14/site-packages (from uvicorn[standard]->-r /dev/fd/63 (line 2)) (1.2.2)
+Requirement already satisfied: pyyaml>=5.1 in ./.venv/lib/python3.14/site-packages (from uvicorn[standard]->-r /dev/fd/63 (line 2)) (6.0.3)
+Requirement already satisfied: uvloop>=0.15.1 in ./.venv/lib/python3.14/site-packages (from uvicorn[standard]->-r /dev/fd/63 (line 2)) (0.22.1)
+Requirement already satisfied: watchfiles>=0.20 in ./.venv/lib/python3.14/site-packages (from uvicorn[standard]->-r /dev/fd/63 (line 2)) (1.2.0)
+Requirement already satisfied: websockets>=10.4 in ./.venv/lib/python3.14/site-packages (from uvicorn[standard]->-r /dev/fd/63 (line 2)) (15.0.1)
+Requirement already satisfied: numpy>=2.3.3 in ./.venv/lib/python3.14/site-packages (from pandas->-r /dev/fd/63 (line 3)) (2.5.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in ./.venv/lib/python3.14/site-packages (from pandas->-r /dev/fd/63 (line 3)) (2.9.0.post0)
+Requirement already satisfied: scipy>=1.10.0 in ./.venv/lib/python3.14/site-packages (from scikit-learn->-r /dev/fd/63 (line 4)) (1.18.0)
+Requirement already satisfied: narwhals>=2.0.1 in ./.venv/lib/python3.14/site-packages (from scikit-learn->-r /dev/fd/63 (line 4)) (2.22.1)
+Requirement already satisfied: threadpoolctl>=3.5.0 in ./.venv/lib/python3.14/site-packages (from scikit-learn->-r /dev/fd/63 (line 4)) (3.6.0)
+Requirement already satisfied: transformers<6.0.0,>=4.41.0 in ./.venv/lib/python3.14/site-packages (from sentence-transformers->-r /dev/fd/63 (line 7)) (5.12.1)
+Requirement already satisfied: huggingface-hub>=0.23.0 in ./.venv/lib/python3.14/site-packages (from sentence-transformers->-r /dev/fd/63 (line 7)) (1.21.0)
+Requirement already satisfied: torch>=1.11.0 in ./.venv/lib/python3.14/site-packages (from sentence-transformers->-r /dev/fd/63 (line 7)) (2.12.1)
+Requirement already satisfied: tqdm>=4.0.0 in ./.venv/lib/python3.14/site-packages (from sentence-transformers->-r /dev/fd/63 (line 7)) (4.68.3)
+Requirement already satisfied: packaging>=20.0 in ./.venv/lib/python3.14/site-packages (from transformers<6.0.0,>=4.41.0->sentence-transformers->-r /dev/fd/63 (line 7)) (26.2)
+Requirement already satisfied: regex>=2025.10.22 in ./.venv/lib/python3.14/site-packages (from transformers<6.0.0,>=4.41.0->sentence-transformers->-r /dev/fd/63 (line 7)) (2026.5.9)
+Requirement already satisfied: tokenizers<=0.23.0,>=0.22.0 in ./.venv/lib/python3.14/site-packages (from transformers<6.0.0,>=4.41.0->sentence-transformers->-r /dev/fd/63 (line 7)) (0.22.2)
+Requirement already satisfied: typer in ./.venv/lib/python3.14/site-packages (from transformers<6.0.0,>=4.41.0->sentence-transformers->-r /dev/fd/63 (line 7)) (0.25.1)
+Requirement already satisfied: safetensors>=0.4.3 in ./.venv/lib/python3.14/site-packages (from transformers<6.0.0,>=4.41.0->sentence-transformers->-r /dev/fd/63 (line 7)) (0.8.0)
+Requirement already satisfied: filelock>=3.10.0 in ./.venv/lib/python3.14/site-packages (from huggingface-hub>=0.23.0->sentence-transformers->-r /dev/fd/63 (line 7)) (3.29.4)
+Requirement already satisfied: fsspec>=2023.5.0 in ./.venv/lib/python3.14/site-packages (from huggingface-hub>=0.23.0->sentence-transformers->-r /dev/fd/63 (line 7)) (2026.6.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.5.1 in ./.venv/lib/python3.14/site-packages (from huggingface-hub>=0.23.0->sentence-transformers->-r /dev/fd/63 (line 7)) (1.5.1)
+Requirement already satisfied: httpx<1,>=0.23.0 in ./.venv/lib/python3.14/site-packages (from huggingface-hub>=0.23.0->sentence-transformers->-r /dev/fd/63 (line 7)) (0.28.1)
+Requirement already satisfied: anyio in ./.venv/lib/python3.14/site-packages (from httpx<1,>=0.23.0->huggingface-hub>=0.23.0->sentence-transformers->-r /dev/fd/63 (line 7)) (4.14.1)
+Requirement already satisfied: certifi in ./.venv/lib/python3.14/site-packages (from httpx<1,>=0.23.0->huggingface-hub>=0.23.0->sentence-transformers->-r /dev/fd/63 (line 7)) (2026.6.17)
+Requirement already satisfied: httpcore==1.* in ./.venv/lib/python3.14/site-packages (from httpx<1,>=0.23.0->huggingface-hub>=0.23.0->sentence-transformers->-r /dev/fd/63 (line 7)) (1.0.9)
+Requirement already satisfied: idna in ./.venv/lib/python3.14/site-packages (from httpx<1,>=0.23.0->huggingface-hub>=0.23.0->sentence-transformers->-r /dev/fd/63 (line 7)) (3.18)
+Requirement already satisfied: shellingham>=1.3.0 in ./.venv/lib/python3.14/site-packages (from typer->transformers<6.0.0,>=4.41.0->sentence-transformers->-r /dev/fd/63 (line 7)) (1.5.4)
+Requirement already satisfied: rich>=13.8.0 in ./.venv/lib/python3.14/site-packages (from typer->transformers<6.0.0,>=4.41.0->sentence-transformers->-r /dev/fd/63 (line 7)) (15.0.0)
+Requirement already satisfied: langchain-core<2.0.0,>=1.4.7 in ./.venv/lib/python3.14/site-packages (from langchain->-r /dev/fd/63 (line 9)) (1.4.8)
+Requirement already satisfied: langgraph-checkpoint<5.0.0,>=4.1.0 in ./.venv/lib/python3.14/site-packages (from langgraph->-r /dev/fd/63 (line 11)) (4.1.1)
+Requirement already satisfied: langgraph-prebuilt<1.2.0,>=1.1.0 in ./.venv/lib/python3.14/site-packages (from langgraph->-r /dev/fd/63 (line 11)) (1.1.0)
+Requirement already satisfied: langgraph-sdk<0.5.0,>=0.4.2 in ./.venv/lib/python3.14/site-packages (from langgraph->-r /dev/fd/63 (line 11)) (0.4.2)
+Requirement already satisfied: xxhash>=3.5.0 in ./.venv/lib/python3.14/site-packages (from langgraph->-r /dev/fd/63 (line 11)) (3.8.0)
+Requirement already satisfied: jsonpatch<2.0.0,>=1.33.0 in ./.venv/lib/python3.14/site-packages (from langchain-core<2.0.0,>=1.4.7->langchain->-r /dev/fd/63 (line 9)) (1.33)
+Requirement already satisfied: langchain-protocol>=0.0.17 in ./.venv/lib/python3.14/site-packages (from langchain-core<2.0.0,>=1.4.7->langchain->-r /dev/fd/63 (line 9)) (0.0.18)
+Requirement already satisfied: langsmith<1.0.0,>=0.3.45 in ./.venv/lib/python3.14/site-packages (from langchain-core<2.0.0,>=1.4.7->langchain->-r /dev/fd/63 (line 9)) (0.9.3)
+Requirement already satisfied: tenacity!=8.4.0,<10.0.0,>=8.1.0 in ./.venv/lib/python3.14/site-packages (from langchain-core<2.0.0,>=1.4.7->langchain->-r /dev/fd/63 (line 9)) (9.1.4)
+Requirement already satisfied: uuid-utils<1.0,>=0.12.0 in ./.venv/lib/python3.14/site-packages (from langchain-core<2.0.0,>=1.4.7->langchain->-r /dev/fd/63 (line 9)) (0.16.2)
+Requirement already satisfied: jsonpointer>=1.9 in ./.venv/lib/python3.14/site-packages (from jsonpatch<2.0.0,>=1.33.0->langchain-core<2.0.0,>=1.4.7->langchain->-r /dev/fd/63 (line 9)) (3.1.1)
+Requirement already satisfied: ormsgpack>=1.12.0 in ./.venv/lib/python3.14/site-packages (from langgraph-checkpoint<5.0.0,>=4.1.0->langgraph->-r /dev/fd/63 (line 11)) (1.12.2)
+Requirement already satisfied: orjson>=3.11.5 in ./.venv/lib/python3.14/site-packages (from langgraph-sdk<0.5.0,>=0.4.2->langgraph->-r /dev/fd/63 (line 11)) (3.11.9)
+Requirement already satisfied: distro>=1.7.0 in ./.venv/lib/python3.14/site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.4.7->langchain->-r /dev/fd/63 (line 9)) (1.9.0)
+Requirement already satisfied: requests-toolbelt>=1.0.0 in ./.venv/lib/python3.14/site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.4.7->langchain->-r /dev/fd/63 (line 9)) (1.0.0)
+Requirement already satisfied: requests>=2.0.0 in ./.venv/lib/python3.14/site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.4.7->langchain->-r /dev/fd/63 (line 9)) (2.34.2)
+Requirement already satisfied: sniffio>=1.1 in ./.venv/lib/python3.14/site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.4.7->langchain->-r /dev/fd/63 (line 9)) (1.3.1)
+Requirement already satisfied: zstandard>=0.23.0 in ./.venv/lib/python3.14/site-packages (from langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.4.7->langchain->-r /dev/fd/63 (line 9)) (0.25.0)
+Requirement already satisfied: annotated-types>=0.6.0 in ./.venv/lib/python3.14/site-packages (from pydantic>=2.9.0->fastapi->-r /dev/fd/63 (line 1)) (0.7.0)
+Requirement already satisfied: pydantic-core==2.46.4 in ./.venv/lib/python3.14/site-packages (from pydantic>=2.9.0->fastapi->-r /dev/fd/63 (line 1)) (2.46.4)
+Requirement already satisfied: aiohttp<4.0.0,>=3.8.3 in ./.venv/lib/python3.14/site-packages (from langchain-community->-r /dev/fd/63 (line 10)) (3.14.1)
+Requirement already satisfied: httpx-sse<1.0.0,>=0.4.0 in ./.venv/lib/python3.14/site-packages (from langchain-community->-r /dev/fd/63 (line 10)) (0.4.3)
+Requirement already satisfied: langchain-classic<2.0.0,>=1.0.7 in ./.venv/lib/python3.14/site-packages (from langchain-community->-r /dev/fd/63 (line 10)) (1.0.8)
+Requirement already satisfied: pydantic-settings<3.0.0,>=2.10.1 in ./.venv/lib/python3.14/site-packages (from langchain-community->-r /dev/fd/63 (line 10)) (2.14.2)
+Requirement already satisfied: sqlalchemy<3.0.0,>=1.4.0 in ./.venv/lib/python3.14/site-packages (from langchain-community->-r /dev/fd/63 (line 10)) (2.0.51)
+Requirement already satisfied: aiohappyeyeballs>=2.5.0 in ./.venv/lib/python3.14/site-packages (from aiohttp<4.0.0,>=3.8.3->langchain-community->-r /dev/fd/63 (line 10)) (2.6.2)
+Requirement already satisfied: aiosignal>=1.4.0 in ./.venv/lib/python3.14/site-packages (from aiohttp<4.0.0,>=3.8.3->langchain-community->-r /dev/fd/63 (line 10)) (1.4.0)
+Requirement already satisfied: attrs>=17.3.0 in ./.venv/lib/python3.14/site-packages (from aiohttp<4.0.0,>=3.8.3->langchain-community->-r /dev/fd/63 (line 10)) (26.1.0)
+Requirement already satisfied: frozenlist>=1.1.1 in ./.venv/lib/python3.14/site-packages (from aiohttp<4.0.0,>=3.8.3->langchain-community->-r /dev/fd/63 (line 10)) (1.8.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in ./.venv/lib/python3.14/site-packages (from aiohttp<4.0.0,>=3.8.3->langchain-community->-r /dev/fd/63 (line 10)) (6.7.1)
+Requirement already satisfied: propcache>=0.2.0 in ./.venv/lib/python3.14/site-packages (from aiohttp<4.0.0,>=3.8.3->langchain-community->-r /dev/fd/63 (line 10)) (0.5.2)
+Requirement already satisfied: yarl<2.0,>=1.17.0 in ./.venv/lib/python3.14/site-packages (from aiohttp<4.0.0,>=3.8.3->langchain-community->-r /dev/fd/63 (line 10)) (1.24.2)
+Requirement already satisfied: langchain-text-splitters<2.0.0,>=1.1.2 in ./.venv/lib/python3.14/site-packages (from langchain-classic<2.0.0,>=1.0.7->langchain-community->-r /dev/fd/63 (line 10)) (1.1.2)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.14/site-packages (from requests>=2.0.0->langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.4.7->langchain->-r /dev/fd/63 (line 9)) (3.4.7)
+Requirement already satisfied: urllib3<3,>=1.26 in ./.venv/lib/python3.14/site-packages (from requests>=2.0.0->langsmith<1.0.0,>=0.3.45->langchain-core<2.0.0,>=1.4.7->langchain->-r /dev/fd/63 (line 9)) (2.7.0)
+Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.14/site-packages (from python-dateutil>=2.8.2->pandas->-r /dev/fd/63 (line 3)) (1.17.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in ./.venv/lib/python3.14/site-packages (from rich>=13.8.0->typer->transformers<6.0.0,>=4.41.0->sentence-transformers->-r /dev/fd/63 (line 7)) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in ./.venv/lib/python3.14/site-packages (from rich>=13.8.0->typer->transformers<6.0.0,>=4.41.0->sentence-transformers->-r /dev/fd/63 (line 7)) (2.20.0)
+Requirement already satisfied: mdurl~=0.1 in ./.venv/lib/python3.14/site-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers<6.0.0,>=4.41.0->sentence-transformers->-r /dev/fd/63 (line 7)) (0.1.2)
+Requirement already satisfied: setuptools<82 in ./.venv/lib/python3.14/site-packages (from torch>=1.11.0->sentence-transformers->-r /dev/fd/63 (line 7)) (81.0.0)
+Requirement already satisfied: sympy>=1.13.3 in ./.venv/lib/python3.14/site-packages (from torch>=1.11.0->sentence-transformers->-r /dev/fd/63 (line 7)) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in ./.venv/lib/python3.14/site-packages (from torch>=1.11.0->sentence-transformers->-r /dev/fd/63 (line 7)) (3.6.1)
+Requirement already satisfied: jinja2 in ./.venv/lib/python3.14/site-packages (from torch>=1.11.0->sentence-transformers->-r /dev/fd/63 (line 7)) (3.1.6)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in ./.venv/lib/python3.14/site-packages (from sympy>=1.13.3->torch>=1.11.0->sentence-transformers->-r /dev/fd/63 (line 7)) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in ./.venv/lib/python3.14/site-packages (from jinja2->torch>=1.11.0->sentence-transformers->-r /dev/fd/63 (line 7)) (3.0.3)
+▶️ Launching FastAPI on http://localhost:8000 …
+📦 Installing Node.js dependencies (if not already)…
+/Users/avipriyaghosh/Desktop/telecom-anomaly-system/backend/agent.py:23: LangChainDeprecationWarning: The class `Ollama` was deprecated in LangChain 0.3.1 and will be removed in 1.0.0. An updated version of the class exists in the `langchain-ollama package and should be used instead. To use it run `pip install -U `langchain-ollama` and import as `from `langchain_ollama import OllamaLLM``.
+  LLM = Ollama(model="llama3.2:latest")  # replace with your preferred LLM endpoint
+INFO:     Started server process [23878]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+
+up to date, audited 198 packages in 654ms
+
+31 packages are looking for funding
+  run `npm fund` for details
+
+2 vulnerabilities (1 moderate, 1 high)
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+npm warn allow-scripts 2 packages have install scripts not yet covered by allowScripts:
+npm warn allow-scripts   esbuild@0.21.5 (install: (install scripts present))
+npm warn allow-scripts   fsevents@2.3.3 (install: (install scripts present))
+npm warn allow-scripts
+npm warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+▶️ Launching Vite dev server on http://localhost:5173 …
+
+> telecom-anomaly-frontend@0.1.0 dev
+> vite
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+  VITE v5.4.21  ready in 265 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 10236.55it/s]
+INFO:     127.0.0.1:60477 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60499 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60498 - "GET /api/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60500 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60501 - "GET /api/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60502 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60503 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60506 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60509 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 14331.65it/s]
+INFO:     127.0.0.1:60512 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60731 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60730 - "GET /api/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60734 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60735 - "GET /api/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60738 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60741 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60744 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60747 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60788 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60787 - "GET /api/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60791 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60792 - "GET /api/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60795 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60798 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60801 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60804 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64807 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64806 - "GET /api/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64810 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64811 - "GET /api/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64814 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64817 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64820 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64823 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52291 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52290 - "GET /api/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52294 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52295 - "GET /api/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52298 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52301 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52304 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52307 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52642 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52641 - "GET /api/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52643 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52644 - "GET /api/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52647 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52650 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52653 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52656 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8524.34it/s]
+INFO:     127.0.0.1:52663 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52692 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52691 - "GET /api/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52697 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52698 - "GET /api/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52701 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52704 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52707 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52710 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52713 - "POST /api/ticket/c4324 HTTP/1.1" 200 OK
+11:31:55 AM [vite] hmr update /src/App.jsx, /src/index.css
+INFO:     127.0.0.1:52750 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52749 - "GET /api/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52751 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52754 - "GET /api/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52757 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52760 - "GET /api/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52763 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52766 - "GET /api/kpis HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52769 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52772 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52775 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52778 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52781 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52784 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52787 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52790 - "GET /api/customers?limit=100 HTTP/1.1" 200 OK
+11:32:17 AM [vite] hmr update /src/components/TicketCenter.jsx, /src/index.css
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [23878]
+/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/resource_tracker.py:475: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/loky-23878-iba76s91'}
+  warnings.warn(
+./run.sh: line 51: 23878 Terminated: 15          PYTHONPATH=. backend/.venv/bin/uvicorn backend.app:app --host 0.0.0.0 --port 8000  (wd: ~/Desktop/telecom-anomaly-system)
+🛑 One of the services stopped – shutting down the other…
+✅ All stopped. Bye!

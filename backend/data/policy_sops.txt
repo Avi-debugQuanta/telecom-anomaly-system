@@ -1,0 +1,27 @@
+SOP-01: BYPASS FRAUD
+If a customer shows unusually high call minutes with zero or negligible revenue,
+1. Verify call detail records (CDR) for cloned SIM or international bypass.
+2. Place a temporary service bar on the line.
+3. Notify the Fraud Management Team for further investigation.
+4. If fraud is confirmed, issue a credit adjustment and block the offending device.
+
+SOP-02: BILLING SYSTEM ERRORS
+When total billed amount deviates >30% from expected usage‑based revenue:
+1. Run a usage‑to‑billing reconciliation report.
+2. Check for rating engine mis‑configuration or tariff mapping errors.
+3. Correct the tariff plan in the billing system and re‑bill the affected period.
+4. Document the root cause and update the SOP wiki.
+
+SOP-03: ROAMING REVENUE LEAKAGE
+If roaming usage spikes without corresponding roaming charges:
+1. Validate roaming partner agreements and TAP file ingestion.
+2. Ensure the mediation layer is correctly applying roaming rates.
+3. Raise a ticket with the Clearing House if partner data is missing.
+4. Apply provisional charges and settle post‑reconciliation.
+
+SOP-04: PREPAID TOP‑UP FRAUD
+Detect patterns of rapid successive top‑ups followed by immediate high‑value usage:
+1. Flag the MSISDN for velocity checks.
+2. Temporarily suspend further top‑ups until verification.
+3. Conduct KYC re‑validation of the subscriber.
+4. Refund any illicit top‑up amount and close the loop with the fraud team.

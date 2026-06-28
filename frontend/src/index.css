@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bg text-gray-100 font-sans antialiased;
+    /* Animated mesh gradient background */
+    background: radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.15), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.15), transparent 25%),
+                radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.1), transparent 25%),
+                #0f172a;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  /* Global glassmorphism utility */
+  .glass-panel {
+    @apply bg-card/40 backdrop-blur-xl border border-white/10 shadow-glass rounded-xl overflow-hidden;
+  }
+  
+  .glass-button {
+    @apply bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 px-4 py-2 rounded-lg font-medium transition-all shadow-sm;
+  }
+  
+  .glass-input {
+    @apply bg-black/20 border border-white/10 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all w-full text-white placeholder-gray-400;
+  }
+  
+  /* Smooth transition for hover effects */
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  /* Modern tab styling */
+  .react-tabs__tab-list {
+    @apply flex space-x-2 border-b border-white/10 mb-6;
+  }
+  
+  .react-tabs__tab {
+    @apply px-5 py-3 rounded-t-lg font-medium text-gray-400 cursor-pointer transition-all hover:text-white hover:bg-white/5 border-b-2 border-transparent outline-none;
+  }
+  
+  .react-tabs__tab--selected {
+    @apply text-accent border-b-2 border-accent bg-white/5;
+  }
+}
+
+/* Dark mode scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
