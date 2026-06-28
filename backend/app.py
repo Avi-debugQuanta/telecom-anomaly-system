@@ -23,7 +23,7 @@ app = FastAPI(title="Telecom Revenue Leakage & Anomaly Detection API")
 # CORS – allow Vite dev server
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", "https://avi-debugquanta.github.io"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
